@@ -1,7 +1,7 @@
 import http from 'http';
 import fs from 'fs';
 
-const PORT = 8080
+const PORT = 80
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
