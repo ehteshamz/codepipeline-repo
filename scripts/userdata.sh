@@ -11,6 +11,13 @@ yum -y update
 yum -y install ruby
 yum -y install wget
 
+# Installing the CodeDeploy agent
+cd /home/ec2-user
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+cd /../..
+
 # Downloading and Installing NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
@@ -26,9 +33,3 @@ cat <<EOF >> /home/ec2-user/.bashrc
 export NVM_DIR="/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 EOF
-
-# Installing the CodeDeploy agent
-cd /home/ec2-user
-wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
-chmod +x ./install
-./install auto
