@@ -2,10 +2,8 @@ version: 0.2
 
 artifacts:
   files:
-  - web-app/*
-  - scripts/*.sh
-  - appspec.yml
-  discard-paths: no
+  - '**/*'
+  base-directory: 'web-app'
 
 cache:
   paths:
