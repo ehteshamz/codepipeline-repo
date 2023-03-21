@@ -5,7 +5,7 @@ artifacts:
   - web-app/*
   - scripts/*.sh
   - appspec.yml
-  discard-paths: yes
+  discard-paths: no
 
 cache:
   paths:
